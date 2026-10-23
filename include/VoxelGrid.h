@@ -13,6 +13,9 @@ public:
     VoxelGrid(int width, int height, int depth, double resolution);
 
     bool isValid(int x, int y, int z) const;
+    int width() const { return width_; }
+    int height() const { return height_; }
+    int depth() const { return depth_; }
     // Both occupancy operations throw out_of_range for invalid coordinates.
     bool isOccupied(int x, int y, int z) const;
     void setOccupied(int x, int y, int z, bool occupied = true);
